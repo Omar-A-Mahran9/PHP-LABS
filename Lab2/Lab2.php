@@ -68,6 +68,9 @@ foreach($students as $x => $value) {
    echo "<tr>";
     foreach($students[$x] as $i => $value) {
     //echo "Key=" . $i . ", Value=" . $x_value;
+    if($i==='status'){
+      echo "<td style='color:red'>".$value."</td>";
+    }
     echo "<td>".$value."</td>";
     }
     echo "</tr>";
