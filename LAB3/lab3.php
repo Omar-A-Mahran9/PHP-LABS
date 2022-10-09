@@ -113,6 +113,7 @@ if(!is_numeric($name)){
 echo 'name : '.$name."<br>";
 }
 else{
+    die('You enter number in name field please edit it Also submit it Again...');
     echo 'name : '. '<b style="color:red">must be STRING Only</b>'."<br>";
 }
 echo 'Email : '.$Email."<br>";
