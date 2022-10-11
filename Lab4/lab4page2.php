@@ -6,8 +6,7 @@
 </head>
 
 <body>
-
-<div class='container'> 
+  <div class='container'> 
 <div class='w-50 m-auto'>
 <h1>User Registration Form</h1>
 <p>please fill this form and submit to add user record to the database</p>
@@ -41,14 +40,14 @@
 <input class="btn btn-primary" type="submit" name="submit" value='submit'>
 <input class="btn btn-danger" type="reset" name="cancel"></input>
 </form>
+</div>
 <?php
+
 $name=$_POST['name'];
 $email=$_POST['email'];
 $gender=$_POST['gender'];
 $check=$_POST['tru'];
 $submit=$_POST['submit'];
-
-
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     if(isset($submit)){
 
@@ -90,22 +89,7 @@ else{
 }
 }
 
-if ($_SERVER["REQUEST_METHOD"] == "GET"){
-
-  if(isset($_GET['iid'])){
-    
-
-  }
-}
-
-
 ?>
-
-
-
-
-
-
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.1/js/bootstrap.min.js"></script>
 </div>
 </body>

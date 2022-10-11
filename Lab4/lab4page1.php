@@ -52,7 +52,7 @@ if ($conn->connect_error) {
       echo "<td>".$row['mailStatue']."</td>";
       echo "<td class='d-flex gap-3' >
       <a class='btn btn-danger' type='button'  href=lab4page1.php?id=".$row['id'].">Delete</a>
-      <a class='btn btn-primary' type='button' href=lab4page2.php?iid=".$row['id'].">Edit</a>
+      <a class='btn btn-primary' type='button' href=update.php?iid=".$row['id'].">Edit</a>
       <a class='btn btn-success' type='button' href=lab4page3.php?id=".$row['id'].">view</a></td>";
       echo "</tr>";
       //echo "id: " . $row["id"]. " - Name: " . $row["Name"]. " " . $row["Email"]. " ".$row["Gender"]." ".$row["mailStatue"]."<br>";
@@ -82,7 +82,7 @@ if ($conn->connect_error) {
   $sql="DELETE FROM INFOREG WHERE id=$id";
   if ($conn->query($sql) === TRUE) {
     echo "<b class='alert alert-success'>Record deleted successfully</b>";
-    header("Refresh:0");
+    header("Refresh:1; url=lab4page1.php");
     exit();
   } else {
     echo "Error deleting record: " . $conn->error;
